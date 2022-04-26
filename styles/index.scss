@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+$bp-largest: 700px;
+$bp-larger: 570px;
+$bp-large: 530px;
+$bp-small: 420px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background-color: $dark-blue;
+}
+
+.container {
+    height: 97.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    background-color: $dark-grayish-blue;
+    width: 65rem;
+    height: 40rem;
+    border-radius: 2rem;
+    padding: 5rem 5rem 9rem 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $bp-largest) {
+        width: 55rem;
+        height: 35rem;
+    }
+
+    @media screen and (max-width: $bp-larger) {
+        width: 50rem;
+        padding: 5rem 5rem 6rem 5rem;
+    }
+
+    @media screen and (max-width: $bp-large) {
+        width: 40rem;
+        padding: 3rem 3rem 6rem 3rem;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        width: 35rem;
+    }
+
+    &__title {
+        color: $neon-green;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+
+        @media screen and (max-width: $bp-largest) {
+            font-size: 1.7rem;
+        }
+
+        @media screen and (max-width: $bp-large) {
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__advice {
+        color: $light-cyan;
+        font-size: 3.4rem;
+        text-align: center;
+
+        @media screen and (max-width: $bp-largest) {
+            font-size: 3rem;
+        }
+
+        @media screen and (max-width: $bp-large) {
+            font-size: 2.6rem;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__line {
+        width: 100%;
+    }
+
+    &__dice {
+        position: absolute;
+        width: 7.5rem;
+        height: 7.5rem;
+        background-color: $neon-green;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        bottom: -4rem;
+
+        @media screen and (max-width: $bp-large) {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        &:hover {
+            box-shadow: 1px 1px 30px $neon-green;
+        }
+    }
+}
